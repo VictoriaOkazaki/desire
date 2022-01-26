@@ -201,7 +201,7 @@
 }
 
 .rightside-menu {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   top: 0;
   right: 0;
@@ -212,9 +212,9 @@
   background-color: #fff;
   padding-top: 40px;
   box-shadow: -2px 3px 17px 0px #000;
-  transition: all .5s;
+  transition: all .7s ease-in-out;
   &.rightside-menu--close {
-    display: none;
+    transform: translate3d(500%, 0, 0);
   }
   &__close {
     background-color: transparent;
@@ -264,7 +264,7 @@
 .breadcrumbs {
   background-color: rgba(#dfdfdf, .5);
   padding: 13px 14px;
-  position: relative;
+  position: static;
   z-index: 999;
   &__list {
     display: flex;
@@ -752,6 +752,9 @@
 .map {
   margin-top: -53px;
   margin-bottom: 50px;
+  iframe {
+    height: 578px;
+  }
 }
 
 .contact {
@@ -840,6 +843,11 @@
 
 .contact-slider {
   padding-bottom: 102px;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &__link {
     position: relative;
     margin-bottom: 20px;
@@ -853,6 +861,7 @@
     width: 140px;
     height: 140px;
     object-fit: cover;
+    justify-content: center;
   }
   &__title {
     transition: all .5s;
@@ -862,7 +871,7 @@
     top: 0;
     bottom: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: rgba(#fff, 0.6);
     color: $title;

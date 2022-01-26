@@ -1,3 +1,10 @@
+@media (max-width: 1700px) {
+    .contact-slider__img {
+        width: 100%;
+        height: 100%
+    }
+}
+
 @media (max-width: 1366px) {
     .collection {
         grid-template-columns: repeat(3, 1fr);
@@ -7,7 +14,10 @@
     }
     .inspiration__images {
         margin-right: 10px;
-        margin-left: -80px;
+        margin-left: 0;
+    }
+    .map {
+        margin-top: 0;
     }
 }
 
@@ -22,6 +32,29 @@
     }
     .inspiration__content {
         max-width: 425px;
+    }
+    .contact-slider__img {
+        height: 240px;
+        width: 240px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .blog__inner {
+        flex-wrap: wrap;
+    }
+    .blog__items {
+        max-width: 100%;
+    }
+    .blog__item-img {
+        max-width: 100%;
+        width: 100%;
+    }
+    .aside {
+        width: 100%;
+        order: -1;
+        margin-left: 0;
+        margin-bottom: 50px;
     }
 }
 
@@ -67,6 +100,9 @@
     }
     .works-path__item--measurements {
         margin-left: 100px;
+    }
+    .contact__inner {
+        padding-left: 0;
     }
 }
 
@@ -119,6 +155,14 @@
     }
     .inspiration__images {
         margin-right: 0;
+    }
+    .map {
+        iframe {
+            height: 378px;
+        }
+    }
+    .blog__quote {
+        padding: 44px 54px;
     }
 }
 
@@ -173,6 +217,12 @@
     .blog-box__img {
         width: 100%;
     }
+    .contact__form-input {
+        width: 100%;
+    }
+    .slick-dots li {
+        padding: 0 5px;
+    }
 }
 
 @media (max-width: 540px) {
@@ -200,11 +250,13 @@
         position: relative;
         z-index: 11;
         text-align: center;
-        transform: translateY(-350px);
-        transition: all .5s;
+        // transform: translateY(-350px);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all .6s ease-in-out;
     }
     .menu--open {
-        transform: translateY(30px);
+        opacity: 1;
     }
     .menu__list {
         display: block; 
@@ -215,6 +267,10 @@
     .menu__list-link {
         display: block;
         padding: 15px 0;
+        font-size: 14px;
+    }
+    .menu__list-link--active::after {
+        display: none;
     }
     .collection {
         grid-template-columns: repeat(1, 1fr);
@@ -242,6 +298,70 @@
     }
     .inspiration__item-text{
         margin-right: 10px;
+    }
+    .gallery__items {
+        grid-gap: 5px;
+    }
+    .contact-slider__title {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .blog__category-title,
+    .blog__item-title,
+    .recent-posts__title,
+    .blog__tags-title,
+    .blog__quote-author {
+        font-size: 16px;
+        line-height: 23px;
+    }
+    .blog-box__item-title {
+        font-size: 24px;
+        line-height: 38px;
+    }
+    .blog__quote {
+        padding: 34px 44px;
+    }
+    .blog-one__links {
+        padding: 30px 0;
+    }
+    .blog-one__link {
+        span {
+            display: none;
+        }
+    }
+    .blog-one__form-input {
+        width: 100%;
+    }
+    .blog-one__comments-name,
+    .blog-one__form-title {
+        font-size: 16px;
+        line-height: 27px;
+    }
+    .blog-one__comments-item {
+        flex-wrap: wrap;
+    }
+    .blog-one__comments-avatar {
+        width: 45px;
+        height: 45px;
+    }
+    .blog-one__comments-name,
+    .blog-one__comments-date {
+        margin-left: 55px;
+    }
+    .blog-one__comments-info {
+        margin-top: -46px;
+    }
+    .blog-one__comments-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .blog-one__reply {
+        margin-left: 0;
+        font-size: 16px;
+        margin-top: 8px;
+    }
+    .blog__item {
+        margin-bottom: 40px;
     }
 }
 
@@ -274,7 +394,7 @@
         padding-bottom: 50px;
     }
     .gallery__items {
-        grid-gap: 5px;
+        grid-gap: 3px;
     }
     .blog-box {
         padding-bottom: 40px;
@@ -282,5 +402,29 @@
     .inspiration__images {
         height: 275px;
         margin-right: -60px;
+    }
+    .breadcrumbs {
+        padding-top: 6;
+        padding-bottom: 6;
+    }
+    .contact-slider__img {
+        height: 310px;
+        width: 310px;
+    }
+    .blog__quote {
+        padding: 24px 34px;
+        font-size: 20px;
+        line-height: 34px;
+    }
+    .blog-one__item blockquote {
+        padding: 0 20px;
+    }
+    .blog-one__comments-text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .blog-one__reply {
+        font-size: 14px;
+        margin-top: 4px;
     }
 }
